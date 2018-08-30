@@ -1,0 +1,29 @@
+{
+
+    "name": " bc.js",
+
+    "version": "2.1.0",
+
+    "description": "-- AWESOMENESS --",
+
+    "main": " bc.js",
+
+    "scripts": {
+
+      "start": "node bc.js"
+
+
+    },
+
+    "dependencies": {
+        "discord.js": "^11.3.2"
+        },
+
+    "engines": {
+
+      "node": "8.4.0"
+
+    }
+
+  }
+   
