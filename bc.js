@@ -465,7 +465,41 @@ client.on("message", message => {
                           }
 
                       });
+client.on("message", (message) => {
 
+if (message.content === ".help") {
+
+  if(message.channel.type !== "text") return message.reply ("This Command Only For Servers")
+
+  const bcembed = new Discord.RichEmbed
+
+.setColor("RANDOM")
+
+.setFooter('Broadcoast Bot')
+
+.setFooter('===================Broadcoast Bot=======================')
+
+.addField(``)
+
+.addField(`${prefix}bc`, `لارسال راسألة جماعية لجميع اعضاء السيرفر`)
+
+.addField(`${prefix}obc`, `لارسال رسالة جماعية للاون لاين فقط`)
+
+.addField(`${prefix}invite`, `لدعوة البوت الي سيرفرك`)
+
+.addField(`${prefix}bot`, `لروياة معلومات البوت`)
+
+.addField(`${prefix}support`, `لسيرفر الدعم الفني حق البوت`)
+
+.addField(``)
+
+.setFooter('===================Broadcoast Bot=======================')
+
+  message.channel.send({embed : bcembed})
+
+}
+
+});
          
 
 
