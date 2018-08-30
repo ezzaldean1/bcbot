@@ -465,19 +465,21 @@ client.on("message", message => {
                           }
 
                       });
+
+
 client.on("message", (message) => {
 
 if (message.content === ".help") {
 
   if(message.channel.type !== "text") return message.reply ("This Command Only For Servers")
 
-  const bcembed = new Discord.RichEmbed
+  var embed = new Discord.RichEmbed()
 
 .setColor("RANDOM")
 
-.setFooter('Broadcoast Bot')
+.setFooter('Broadcast Bot')
 
-.setFooter('===================Broadcoast Bot=======================')
+.setFooter('===================Broadcast Bot=======================')
 
 .addField(``)
 
@@ -493,13 +495,16 @@ if (message.content === ".help") {
 
 .addField(``)
 
-.setFooter('===================Broadcoast Bot=======================')
+.setFooter('===================Broadcast Bot=======================')
 
-  message.channel.send({embed : bcembed})
+  message.channel.send({embed : embed})
 
 }
 
 });
+
+
+
          
 
 
