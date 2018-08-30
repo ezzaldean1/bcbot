@@ -445,26 +445,31 @@ return;
     }
 
 });
+client.on ("guildMemberAdd", member => {
+
+  
+
+   var role = member.guild.roles.find ("name", "Members");
+
+   member.addRole (role);
+
+  
+
+})
+
+client.on ("guildMemberRemove", member => {
+
    
-client.on("message", message => {
 
-                            const Premium = ['484660959730728961']//ايديات السيرفرات اللي عندها بريميوم
+})
 
-                            if (message.content === ".role-bc") {
 
-                                if( Premium.some(word => message.guild.id.includes(word)) ) {
 
-        message.channel.send('ماني فاضي لك -_-')
 
-                                } else {
 
-   message.channel.send('**Premium Only! 🙃**').then(message => {message.delete(1000)});
+                          
 
-}
-
-                          }
-
-                      });
+                     
 
 client.on("message", (message) => {
 
