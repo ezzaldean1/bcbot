@@ -341,7 +341,7 @@ m.sendMessage(args)
 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
 
-.addField('مصمم  + صاحب البوت ',`اسمك هنا`)
+
 
 .setColor('#7d2dbe')
 
