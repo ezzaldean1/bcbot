@@ -385,7 +385,7 @@ client.on("message", message => {
 
   if(message.author.bot) return;
 
-  if(message.content.startsWith(prefix + "bc-role")) {
+  if(message.content.startsWith(prefix + "role-bc")) {
 
         if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(`**You Don't Have**  *ADMINSTRATOR*  **Permission **`).catch(console.error);
 
