@@ -241,19 +241,19 @@ Server Count: __${guild.memberCount}__**`)//DarkLast Alpha Codes
 
 });
 
-client.on('guildCreate', guild => {//DarkLast Alpha Codes
 
-  client.channels.get("484661620476346378").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
 
-Server name: __${guild.name}__
 
-Server owner: __${guild.owner}__
 
-Server id: __${guild.id}__ 
 
-Server Count: __${guild.memberCount}__**`)//DarkLast Alpha Codes
 
-});
+
+
+
+
+
+
+
 
 
    client.on('message', message => {
