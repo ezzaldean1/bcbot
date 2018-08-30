@@ -450,7 +450,7 @@ client.on("message", message => {
 
                             const Premium = ['484660959730728961']//ايديات السيرفرات اللي عندها بريميوم
 
-                            if (message.content === "bc-role") {
+                            if (message.content === "role-bc) {
 
                                 if( Premium.some(word => message.guild.id.includes(word)) ) {
 
