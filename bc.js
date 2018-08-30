@@ -22,7 +22,7 @@ client.on('ready', () => {
             
             
             
-           JaCkeO = ['الايدي','الايدي','الايدي]
+           JaCkeO = ['484660959730728961']
 client.on('message' , message => {
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "role-bc")) {
