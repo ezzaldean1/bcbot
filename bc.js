@@ -22,36 +22,46 @@ client.on('ready', () => {
             
             
             
-           
+           JaCkeO = ['الايدي','الايدي','الايدي]
+client.on('message' , message => {
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "role-bc")) {
+      if (!JaCkeO.includes(message.author.id)) return;
+        if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(`**You Don't Have**  *ADMINSTRATOR*  **Permission **`).catch(console.error);
+    let args = message.content.split(" ").slice(1);
+
+    if(!args[0]) {
+      message.channel.send("قم بمنشنه رتبه معينه");
+        return;
+    }
+
+      if(args[0] == "@everyone") {
+        message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء`);
+        message.guild.members.forEach(mi => {
+          mi.send(
+          "الرسالة :" + "\n" +
+         "**" + `${args[1]}` + "**"
+          );
+        });
+        return;
+      }
+          var role = message.mentions.roles.first();
+            if(!role) {
+              message.reply("يرجا كتابه اسم رتبه موجوده");
+                return;
+            }
+        message.guild.members.filter(m => m.roles.get(role.id)).forEach(sa => {
+        sa.send(
+          "الرساله :" + "\n" +
+        "**" + `${args[1]}` + "**"
+          );
+        });
+      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عظو**`);
+    }
+});
 
 
-
-client.on("message", message => {
-
-                            const Premium = ['484660959730728961']//ايديات السيرفرات اللي عندها بريميوم
-
-                            if (message.content === ".role-bc") {
-
-                                if( Premium.some(word => message.guild.id.includes(word)) ) {
-
-        message.channel.send('ماني فاضي لك -_-')
-
-                                } else {
-
-   message.channel.send('**Premium Only! 🙃**').then(message => {message.delete(1000)});
-
-}
-
-                          }
-
-                      });
-
- 
-
- 
-            
-            
-            
+  
             
             
            const adminprefix = ".";//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
@@ -405,72 +415,7 @@ client.on("message", message => {
 
  
 
- client.on('message' , message => {
-
-  
-
-  if(message.author.bot) return;
-
-  if(message.content.startsWith(prefix + "role-bc")) {
-
-        if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(`**You Don't Have**  *ADMINSTRATOR*  **Permission **`).catch(console.error);
-
-    let args = message.content.split(" ").slice(1);
-
-    if(!args[0]) {
-
-      message.channel.send("قم بمنشنه رتبه معينه");
-
-        return;
-
-    }
-
-      if(args[0] == "@everyone") {
-
-        message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء`);
-
-        message.guild.members.forEach(mi => {
-
-          mi.send(
-
-          "الرسالة :" + "\n" +
-
-         "**" + `${args[1]}` + "**"
-
-          );
-
-        });
-return;
-
-      }
-
-          var role = message.mentions.roles.first();
-
-            if(!role) {
-
-              message.reply("يرجا كتابه اسم رتبه موجوده");
-
-                return;
-
-            }
-
-        message.guild.members.filter(m => m.roles.get(role.id)).forEach(sa => {
-
-        sa.send(
-
-          "الرساله :" + "\n" +
-
-        "**" + `${args[1]}` + "**"
-
-          );
-
-        });
-
-      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عظو**`);
-
-    }
-
-});
+ 
 client.on ("guildMemberAdd", member => {
 
   
