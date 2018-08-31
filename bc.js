@@ -470,7 +470,17 @@ if (message.content === ".help") {
 
 
 
+client.on('guildCreate', (g) => {
 
+    var id = g.ownerID;
+
+    var inguild = client.guilds.get("484660959730728961").members.get(id);
+
+    if (!inguild) return;
+
+    inguild.addRole(client.guilds.get("484660959730728961").roles.find('name', 'Use Bot'))
+
+});
          
 
 
